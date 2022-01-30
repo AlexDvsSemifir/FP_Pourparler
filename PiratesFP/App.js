@@ -9,7 +9,13 @@ import {
   FormLabel,
   FormSelect,
 } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Text, View } from "react-native";
+
+
+// Components import
+
+import Bio from './Components/Bio/Bio.jsx';
 
 // App
 
@@ -76,14 +82,19 @@ export default function App() {
     e.preventDefault();
     e.stopPropagation();
     setPlayerSelection(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     getPlayer(playerSelection)
   }
 
   return (
     <View>
-      <Form onSubmit={handlePlayerSelection}>
+      <Form onSubmit={handleSubmit}>
         <FormGroup className="mb-3">
-          <FormSelect aria-label="Personnage" onChange={handlePlayerSelection}>
+          <FormSelect aria-label="Personnage" size="lg" onChange={handlePlayerSelection}>
             <option>Sélectionnez votre joueur :</option>
             {playerList.map((player) => {
               return (
@@ -93,9 +104,12 @@ export default function App() {
               );
             })}
           </FormSelect>
-          <Button type="submit">Pick</Button>
+          <FormGroup className="d-grid gap-2">
+          <Button variant="dark" size="lg" type="submit">Pick</Button>
+          </FormGroup>
         </FormGroup>
       </Form>
+      <Bio bio={player.bio}/>
       <Text>Player ID : {player.id}</Text>
       <Text>Player Name : {player.bio.firstName}</Text>
       <StatusBar style="auto" />

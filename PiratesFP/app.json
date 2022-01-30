@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "PiratesFP",
+    "slug": "PiratesFP",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "PiratesFP"
+}

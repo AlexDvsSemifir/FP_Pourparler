@@ -17,6 +17,11 @@ import { Text, View } from "react-native";
 
 import Bio from './Components/Bio/Bio.jsx';
 
+// API
+
+const apiAddress = "http://192.168.0.30:8080/players/"
+
+
 // App
 
 export default function App() {
@@ -52,7 +57,7 @@ export default function App() {
 
   const getPlayer = async (id) => {
     try {
-      const response = await fetch("http://localhost:8080/players/" + id);
+      const response = await fetch(apiAddress + id);
       const json = await response.json();
       console.log(json);
       setPlayer(json);
@@ -63,7 +68,7 @@ export default function App() {
 
   const getPlayerList = async () => {
     try {
-      const response = await fetch("http://localhost:8080/players/");
+      const response = await fetch(apiAddress);
       const json = await response.json();
       console.log(json);
       setPlayerList(json);

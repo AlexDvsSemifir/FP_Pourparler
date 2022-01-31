@@ -1,6 +1,5 @@
 // Default imports :
 
-import { StatusBar } from "expo-status-bar";
 import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +17,6 @@ export default function App() {
   return (
     <View>
       <ApiProvider />
-      <StatusBar style="auto" />
     </View>
   );
 }

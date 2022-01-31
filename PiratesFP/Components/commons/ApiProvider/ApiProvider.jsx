@@ -7,18 +7,19 @@ import { View } from "react-native";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
+// Component Import :
+import HomePage from '../../HomePage/HomePage'
 
 // API Variable
 
 const apiAddress = "http://192.168.0.30:8080/players/";
 
-// Component :
-import HomePage from '../../HomePage/HomePage'
-
+// Context création :
 
 let player = {};
 export const playerContext = React.createContext(player);
+
+// Component :
 
 export const ApiProvider = () => {
 
@@ -52,6 +53,10 @@ export const ApiProvider = () => {
     },
   });
 
+  /**
+   * Récupère un player complet depuis l'API
+   * @param {number} id 
+   */
   const getPlayer = async (id) => {
     try {
       const response = await fetch(apiAddress + id);
@@ -63,6 +68,9 @@ export const ApiProvider = () => {
     }
   };
 
+  /**
+   * Récupère la liste complète des utilisateurs avec l'ensemble de leurs paramètres.
+   */
   const getPlayerList = async () => {
     try {
       const response = await fetch(apiAddress);
@@ -74,17 +82,28 @@ export const ApiProvider = () => {
     }
   };
 
+  /**
+   * Ecoute le chargement de l'app et lance les scripts associés
+   */
   useEffect(() => {
     getPlayerList();
     getPlayer(playerSelection);
   }, []);
 
+  /**
+   * Récupère la sélection du joueur depuis le formulaire
+   * @param {Event} e 
+   */
   const handlePlayerSelection = (e) => {
     e.preventDefault();
     e.stopPropagation();
     setPlayerSelection(e.target.value);
   };
 
+  /**
+   * Met à jour le contenu de la page en fonction de la sélection faire par l'utilisateur
+   * @param {Event} e 
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     e.stopPropagation();

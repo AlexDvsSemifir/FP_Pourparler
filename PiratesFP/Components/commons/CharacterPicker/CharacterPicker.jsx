@@ -1,9 +1,11 @@
 // React imports :
 
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 
 // Bootstrap imports :
+import { Button, Form, FormGroup, FormSelect } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const CharacterPicker = (props) => {
   return (

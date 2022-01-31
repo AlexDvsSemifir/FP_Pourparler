@@ -57,7 +57,7 @@ npm install react-bootstrap bootstrap@5.1.3
 
 ```
 
-Modifiez la variable "API" du fichier "app.js" par "localhost:" suivi du port de votre serveur
+Modifiez la variable "apiAddress" du fichier "app.js" par "http://localhost:" suivi du port de votre serveur
 
 Démarrer le serveur :
 

@@ -8,6 +8,10 @@ import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Comp = (props) => {
+
+  // try
+  let comp = useContext(player.comp) 
+
   return (
     <View>
       <Table striped bordered hover size="sm" responsive>

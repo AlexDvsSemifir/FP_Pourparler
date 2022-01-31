@@ -1,6 +1,6 @@
 // React imports :
 
-import React from "react";
+import React, {useContext} from "react";
 import { Text, View } from "react-native";
 
 // Bootstrap imports :
@@ -8,7 +8,15 @@ import Table from "react-bootstrap/Table";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Context :
+
+import { playerContext } from "../commons/ApiProvider/ApiProvider";
+
 export const Competences = (props) => {
+
+  let comp = useContext(playerContext)
+    comp = comp.comp
+
   return (
     <View>
       <Table striped bordered hover size="sm" responsive>
@@ -20,7 +28,7 @@ export const Competences = (props) => {
           </tr>
         </thead>
         <tbody>
-            {props.comp.map((item, i) => {
+            {comp.map((item, i) => {
 
                 return ( 
                         <tr key={i}>

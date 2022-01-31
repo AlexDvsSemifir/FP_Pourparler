@@ -16,6 +16,9 @@ import { Text, View } from "react-native";
 // Components import
 
 import Bio from './Components/Bio/Bio.jsx';
+import Carac from "./Components/Carac/Carac.jsx";
+import Comp from "./Components/Comp/Comp.jsx";
+import Competences from "./Components/Competences/Competences.jsx";
 
 // API
 
@@ -39,8 +42,9 @@ export default function App() {
     id: "",
     bio: "",
     carac: "",
-    comp: "",
-    compSpe: "",
+    comp: [],
+    compSpe: [],
+    talents: [],
     money: "",
     inventory: {
       loot: "",
@@ -115,8 +119,9 @@ export default function App() {
         </FormGroup>
       </Form>
       <Bio bio={player.bio}/>
-      <Text>Player ID : {player.id}</Text>
-      <Text>Player Name : {player.bio.firstName}</Text>
+      <Carac carac={player.carac}/>
+      {/* <Comp comp={player.comp}/> */}
+      <Competences comp={player.comp}/>
       <StatusBar style="auto" />
     </View>
   );

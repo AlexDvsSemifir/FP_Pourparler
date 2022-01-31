@@ -1,44 +1,351 @@
 [
     {
-        "id": 1,
-        "bio": {
-            "fisrtName": "Stefan",
-            "lastName": "",
-            "age": 30,
-            "description": "Très con mais très puissant",
-            "psychologie": "stupide"
+      "id": 1,
+      "bio": {
+        "firstName": "Stefan",
+        "lastName": "",
+        "age": 40,
+        "description": "Très con mais très puissant",
+        "psychologie": "stupide"
+      },
+      "carac": {
+        "cha": 20,
+        "str": 90,
+        "ins": 90,
+        "int": 20,
+        "mob": 20,
+        "vig": 90,
+        "wil": 20,
+        "des": 4,
+        "for": 4
+      },
+      "comp" : {
+        "armesFeu" : 20,
+        "armesBLeger": 20,
+        "armesBLourd": 20,
+        "artisanat": 20,
+        "command": 20,
+        "crochetage": 20,
+        "deguisement": 20,
+        "discretion": 20,
+        "education": 20,
+        "endurance": 20,
+        "equitation": 20,
+        "escalade": 20,
+        "escamotage": 20,
+        "esquive": 20,
+        "evaluation": 20,
+        "intimidation": 20,
+        "jeu": 20,
+        "natation": 20,
+        "navigation": 20,
+        "orientation": 20,
+        "perception": 20,
+        "perspicacite": 20,
+        "pistage": 20,
+        "pugilat": 20,
+        "recherches": 20,
+        "resistAlcool": 20,
+        "rhetorique": 20,
+        "seduction": 20,
+        "soins": 20,
+        "survie": 20
+  
+      },
+      "compSpe": {
+  
+      },
+      "money": {
+        "R": 0,
+        "P8": 0,
+        "D": 0
+      },
+      "inventory": {
+        "loot": {
+          "slot01": "",
+          "slot02": "",
+          "slot03": "",
+          "slot04": "",
+          "slot05": "",
+          "slot06": "",
+          "slot07": "",
+          "slot08": "",
+          "slot09": "",
+          "slot10": ""
         },
-        "carac": {
-            "cha": 20,
-            "str": 90,
-            "ins": 90,
-            "int": 20,
-            "mob": 20,
-            "vig": 90,
-            "wil": 20,
-            "des": 4,
-            "for": 4
+        "cloth": {
+          "head": "Chapeau de paille",
+          "chest": "Chemise médiocre",
+          "legs": "Pantalon médiocre",
+          "vest": "",
+          "boots": ""
         }
+      },
+      "weapons": {
+        "slot1": {
+          "name": "Fourche",
+          "type": "Arme lourde",
+          "roll": "1d8 + DR",
+          "spec": ""
+        },
+        "slot2": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot3": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot4": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot5": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        }
+      }
+  
     },
     {
-        "id": 2,
-        "bio": {
-            "fisrtName": "Demetra",
-            "lastName": "",
-            "age": 30,
-            "description": "Bonne, mais cruelle",
-            "psychologie": "FUYEZ"
+      "id": 2,
+      "bio": {
+        "firstName": "Demetra",
+        "lastName": "",
+        "age": 20,
+        "description": "Sexy et fatale",
+        "psychologie": "Fuyez"
+      },
+      "carac": {
+        "cha": 90,
+        "str": 20,
+        "ins": 90,
+        "int": 90,
+        "mob": 20,
+        "vig": 20,
+        "wil": 90,
+        "des": 4,
+        "for": 4
+      },
+      "comp" : {
+        "armesFeu" : 20,
+        "armesBLeger": 20,
+        "armesBLourd": 20,
+        "artisanat": 20,
+        "command": 20,
+        "crochetage": 20,
+        "deguisement": 20,
+        "discretion": 20,
+        "education": 20,
+        "endurance": 20,
+        "equitation": 20,
+        "escalade": 20,
+        "escamotage": 20,
+        "esquive": 20,
+        "evaluation": 20,
+        "intimidation": 20,
+        "jeu": 20,
+        "natation": 20,
+        "navigation": 20,
+        "orientation": 20,
+        "perception": 20,
+        "perspicacite": 20,
+        "pistage": 20,
+        "pugilat": 20,
+        "recherches": 20,
+        "resistAlcool": 20,
+        "rhetorique": 20,
+        "seduction": 20,
+        "soins": 20,
+        "survie": 20
+  
+      },
+      "compSpe": {
+  
+      },
+      "money": {
+        "R": 0,
+        "P8": 0,
+        "D": 0
+      },
+      "inventory": {
+        "loot": {
+          "slot01": "",
+          "slot02": "",
+          "slot03": "",
+          "slot04": "",
+          "slot05": "",
+          "slot06": "",
+          "slot07": "",
+          "slot08": "",
+          "slot09": "",
+          "slot10": ""
         },
-        "carac": {
-            "cha": 90,
-            "str": 20,
-            "ins": 90,
-            "int": 90,
-            "mob": 60,
-            "vig": 20,
-            "wil": 90,
-            "des": 4,
-            "for": 4
+        "cloth": {
+          "head": "",
+          "chest": "Corset",
+          "legs": "Robe de riche",
+          "vest": "",
+          "boots": ""
         }
+      },
+      "weapons": {
+        "slot1": {
+          "name": "Le faiseur de veuves",
+          "type": "Arme à feu",
+          "roll": "1d8 + DR",
+          "spec": ""
+        },
+        "slot2": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot3": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot4": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot5": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        }
+      }
+  
+    },
+    {
+      "id": 3,
+      "bio": {
+        "firstName": "Rico",
+        "lastName": "",
+        "age": 70,
+        "description": "",
+        "psychologie": "stupide"
+      },
+      "carac": {
+        "cha": 80,
+        "str": 30,
+        "ins": 70,
+        "int": 70,
+        "mob": 60,
+        "vig": 40,
+        "wil": 70,
+        "des": 4,
+        "for": 4
+      },
+      "comp" : {
+        "armesFeu" : 20,
+        "armesBLeger": 20,
+        "armesBLourd": 20,
+        "artisanat": 20,
+        "command": 20,
+        "crochetage": 20,
+        "deguisement": 20,
+        "discretion": 20,
+        "education": 20,
+        "endurance": 20,
+        "equitation": 20,
+        "escalade": 20,
+        "escamotage": 20,
+        "esquive": 20,
+        "evaluation": 20,
+        "intimidation": 20,
+        "jeu": 20,
+        "natation": 20,
+        "navigation": 20,
+        "orientation": 20,
+        "perception": 20,
+        "perspicacite": 20,
+        "pistage": 20,
+        "pugilat": 20,
+        "recherches": 20,
+        "resistAlcool": 20,
+        "rhetorique": 20,
+        "seduction": 20,
+        "soins": 20,
+        "survie": 20
+  
+      },
+      "compSpe": {
+  
+      },
+      "money": {
+        "R": 0,
+        "P8": 0,
+        "D": 0
+      },
+      "inventory": {
+        "loot": {
+          "slot01": "",
+          "slot02": "",
+          "slot03": "",
+          "slot04": "",
+          "slot05": "",
+          "slot06": "",
+          "slot07": "",
+          "slot08": "",
+          "slot09": "",
+          "slot10": ""
+        },
+        "cloth": {
+          "head": "",
+          "chest": "Chemise",
+          "legs": "Culotte",
+          "vest": "Veste (CH +10)",
+          "boots": ""
+        }
+      },
+      "weapons": {
+        "slot1": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot2": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot3": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot4": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        },
+        "slot5": {
+          "name": "",
+          "type": "",
+          "roll": "",
+          "spec": ""
+        }
+      }
+  
     }
   ]
+  

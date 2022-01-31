@@ -5,24 +5,23 @@ import { View } from "react-native";
 
 // Bootstrap Imports
 
-import { Button, Form, FormGroup, FormSelect } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Components import
 
-import Bio from "../../Bio/Bio";
-import Carac from "../../Carac/Carac";
-import Competences from "../../Competences/Competences";
 
 // API Variable
 
 const apiAddress = "http://192.168.0.30:8080/players/";
 
 // Component :
+import HomePage from '../../HomePage/HomePage'
+
+
 let player = {};
 export const playerContext = React.createContext(player);
 
 export const ApiProvider = () => {
+
   let [playerSelection, setPlayerSelection] = useState(1);
 
   const [playerList, setPlayerList] = useState([
@@ -91,36 +90,12 @@ export const ApiProvider = () => {
     e.stopPropagation();
     getPlayer(playerSelection);
   };
+
   return (
     <View>
-      <Form onSubmit={handleSubmit}>
-        <FormGroup className="mb-3">
-          <FormSelect
-            aria-label="Personnage"
-            size="lg"
-            onChange={handlePlayerSelection}
-          >
-            <option>Sélectionnez votre joueur :</option>
-            {playerList.map((player) => {
-              return (
-                <option key={player.id} value={player.id}>
-                  {player.bio.firstName}
-                </option>
-              );
-            })}
-          </FormSelect>
-          <FormGroup className="d-grid gap-2">
-            <Button variant="dark" size="lg" type="submit">
-              Pick
-            </Button>
-          </FormGroup>
-        </FormGroup>
-      </Form>
-      <playerContext.Provider value={player}>
-        <Bio />
-        <Carac />
-        <Competences />
-      </playerContext.Provider>
+        <playerContext.Provider value={player}>
+        <HomePage handleSubmit={handleSubmit} handlePlayerSelection={handlePlayerSelection} playerList={playerList}/>
+        </playerContext.Provider>
     </View>
   );
 };

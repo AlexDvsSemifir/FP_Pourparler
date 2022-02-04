@@ -3,9 +3,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { View } from "react-native";
 
-// Bootstrap Imports
-
-import "bootstrap/dist/css/bootstrap.min.css";
 
 // Component Import :
 import HomePage from '../../HomePage/HomePage'
@@ -94,10 +91,8 @@ export const ApiProvider = () => {
    * Récupère la sélection du joueur depuis le formulaire
    * @param {Event} e 
    */
-  const handlePlayerSelection = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setPlayerSelection(e.target.value);
+  const handlePlayerSelection = (value, index) => {
+    setPlayerSelection(value);
   };
 
   /**

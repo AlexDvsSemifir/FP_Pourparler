@@ -28,6 +28,13 @@ npm start
 
 ## Front Installation
 
+### Dependencies
+
+[React Native Elements](https://reactnativeelements.com/)
+[React Native Papers](https://callstack.github.io/react-native-paper/index.html)
+
+### Step by step
+
 1. Go to PirateFP folder
 
 ```shell
@@ -55,3 +62,4 @@ npm start
 ```
 
 6. Once expo-cli started, press 'w' to open the web client. 
+

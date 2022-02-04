@@ -1,60 +1,54 @@
 // React imports :
 
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Text, View } from "react-native";
 
-// Bootstrap imports :
-import Table from 'react-bootstrap/Table'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// React Native Paper
+import { DataTable } from "react-native-paper";
 
-// Context : 
+// Context :
 import { playerContext } from "../commons/ApiProvider/ApiProvider";
 
 export const Carac = (props) => {
-
-  let carac = useContext(playerContext)
-    carac = carac.carac
+  let carac = useContext(playerContext);
+  carac = carac.carac;
 
   return (
     <View>
-      <Table striped bordered hover size="sm" responsive>
-        <thead>
-          <tr>
-            <th>Caractéristique</th>
-            <th>Stat</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Charisme</td>
-            <td>{carac.cha}</td>
-          </tr>
-          <tr>
-            <td>Force</td>
-            <td>{carac.str}</td>
-          </tr>
-          <tr>
-            <td>Instinct</td>
-            <td>{carac.ins}</td>
-          </tr>
-          <tr>
-            <td>Intel</td>
-            <td>{carac.int}</td>
-          </tr>
-          <tr>
-            <td>Mobilité</td>
-            <td>{carac.mob}</td>
-          </tr>
-          <tr>
-            <td>Vigueur</td>
-            <td>{carac.vig}</td>
-          </tr>
-          <tr>
-            <td>Volonté</td>
-            <td>{carac.wil}</td>
-          </tr>
-        </tbody>
-      </Table>
+      <DataTable>
+        <DataTable.Header>
+          <DataTable.Title>Caractéristique</DataTable.Title>
+          <DataTable.Title>Stat</DataTable.Title>
+        </DataTable.Header>
+        <DataTable.Row>
+          <DataTable.Cell>Charisme</DataTable.Cell>
+          <DataTable.Cell>{carac.cha}</DataTable.Cell>
+        </DataTable.Row>
+        <DataTable.Row>
+          <DataTable.Cell>Force</DataTable.Cell>
+          <DataTable.Cell>{carac.str}</DataTable.Cell>
+        </DataTable.Row>
+        <DataTable.Row>
+          <DataTable.Cell>Instinct</DataTable.Cell>
+          <DataTable.Cell>{carac.ins}</DataTable.Cell>
+        </DataTable.Row>
+        <DataTable.Row>
+          <DataTable.Cell>Intel</DataTable.Cell>
+          <DataTable.Cell>{carac.int}</DataTable.Cell>
+        </DataTable.Row>
+        <DataTable.Row>
+          <DataTable.Cell>Mobilité</DataTable.Cell>
+          <DataTable.Cell>{carac.mob}</DataTable.Cell>
+        </DataTable.Row>
+        <DataTable.Row>
+          <DataTable.Cell>Vigueur</DataTable.Cell>
+          <DataTable.Cell>{carac.vig}</DataTable.Cell>
+        </DataTable.Row>
+        <DataTable.Row>
+          <DataTable.Cell>Volonté</DataTable.Cell>
+          <DataTable.Cell>{carac.wil}</DataTable.Cell>
+        </DataTable.Row>
+      </DataTable>
     </View>
   );
 };

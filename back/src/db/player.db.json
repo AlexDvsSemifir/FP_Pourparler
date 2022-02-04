@@ -22,13 +22,13 @@
     "comp" : [
       {
         "id" :"abLegr",
-        "name": "Armes blanches (légères)",
+        "name": "Armes bl. (légères)",
         "stat" : 20
       },
         
       {
         "id" :"abLd",
-        "name": "Armes blanches (lourdes)",
+        "name": "Armes bl. (lourdes)",
         "stat" : 20
       },
         
@@ -216,6 +216,285 @@
       {
         "name": "Touché par la grâce",
         "Description": "Avantage sur jet chance"
+      }
+    ],
+    "money": {
+      "R": 0,
+      "P8": 0,
+      "D": 0
+    },
+    "inventory": {
+      "loot": {
+        "slot01": "",
+        "slot02": "",
+        "slot03": "",
+        "slot04": "",
+        "slot05": "",
+        "slot06": "",
+        "slot07": "",
+        "slot08": "",
+        "slot09": "",
+        "slot10": ""
+      },
+      "cloth": {
+        "head": "Chapeau de paille",
+        "chest": "Chemise médiocre",
+        "legs": "Pantalon médiocre",
+        "vest": "",
+        "boots": ""
+      }
+    },
+    "weapons": {
+      "slot1": {
+        "name": "Fourche",
+        "type": "Arme lourde",
+        "roll": "1d8 + DR",
+        "spec": ""
+      },
+      "slot2": {
+        "name": "",
+        "type": "",
+        "roll": "",
+        "spec": ""
+      },
+      "slot3": {
+        "name": "",
+        "type": "",
+        "roll": "",
+        "spec": ""
+      },
+      "slot4": {
+        "name": "",
+        "type": "",
+        "roll": "",
+        "spec": ""
+      },
+      "slot5": {
+        "name": "",
+        "type": "",
+        "roll": "",
+        "spec": ""
+      }
+    }
+
+  },
+  {
+    "id": 2,
+    "bio": {
+      "firstName": "Dame Mevanwi",
+      "lastName": "",
+      "age": 35,
+      "description": "Salope sadique",
+      "psychologie": "Fuyez !"
+    },
+    "carac": {
+      "cha": 80,
+      "str": 20,
+      "ins": 80,
+      "int": 60,
+      "mob": 20,
+      "vig": 20,
+      "wil": 60,
+      "des": 4,
+      "for": 4
+    },
+    "comp" : [
+      {
+        "id" :"abLegr",
+        "name": "Armes bl. (légères)",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"abLd",
+        "name": "Armes bl. (lourdes)",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"aF",
+        "name": "Armes à feu",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"arti",
+        "name": "Artisanat",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"comm",
+        "name": "Commandement",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"croch",
+        "name": "Crochetage",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"degui",
+        "name": "Déguisement",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"disc",
+        "name": "Discrétion",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"edu",
+        "name": "Education",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"end",
+        "name": "Endurance",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"equ",
+        "name": "Equitation",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"escal",
+        "name": "Escalade",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"escam",
+        "name": "Escamotage",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"esqu",
+        "name": "Esquive",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"eval",
+        "name": "Evaluation",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"inti",
+        "name": "Intimidation",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"jeu",
+        "name": "Jeu",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"nat",
+        "name": "Natation",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"navi",
+        "name": "Navigation",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"ori",
+        "name": "Orientation",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"perc",
+        "name": "Perception",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"pers",
+        "name": "Persicacité",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"pist",
+        "name": "Pistage",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"pug",
+        "name": "Pugilat",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"rech",
+        "name": "Recherches",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"resAl",
+        "name": "Resistance à l'alcool",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"rhet",
+        "name": "Rhétorique",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"sed",
+        "name": "Séduction",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"soi",
+        "name": "Soins",
+        "stat" : 20
+      },
+        
+      {
+        "id" :"surv",
+        "name": "Survie",
+        "stat" : 20
+      }
+        
+
+    ],
+    "compSpe": [
+      {
+        "name": "Hypnotiser",
+        "stat": 90
+      },
+      {
+        "name": "Petit feu",
+        "stat": 50
+      }
+    ],
+    "talents" :[
+      {
+        "name": "Aguicheuse",
+        "Description": "Avantage sur jet Charisme pour séduire"
       }
     ],
     "money": {

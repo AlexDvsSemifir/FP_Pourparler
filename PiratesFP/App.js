@@ -1,10 +1,7 @@
 // Default imports :
 
 import React from "react";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Text, View } from "react-native";
-
+import { SafeAreaView, ScrollView, StatusBar, Text, View } from "react-native";
 
 // Components import
 
@@ -13,10 +10,12 @@ import ApiProvider from "./Components/commons/ApiProvider/ApiProvider.jsx";
 // App
 
 export default function App() {
-
   return (
-    <View>
-      <ApiProvider />
-    </View>
+    <SafeAreaView>
+      <StatusBar hidden={true} />
+        <ScrollView>
+          <ApiProvider />
+        </ScrollView>
+    </SafeAreaView>
   );
 }

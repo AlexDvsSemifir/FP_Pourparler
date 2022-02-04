@@ -1,7 +1,7 @@
 // React imports :
 
 import React, { useContext } from "react";
-import { Text, View, Button, FlatList } from "react-native";
+import { Text, View, Button } from "react-native";
 
 // React Native Paper
 import { DataTable } from "react-native-paper";
@@ -10,19 +10,19 @@ import { DataTable } from "react-native-paper";
 
 import { playerContext } from "../commons/ApiProvider/ApiProvider";
 
-export const Competences = (props) => {
-  let comp = useContext(playerContext);
-  comp = comp.comp;
+const CompetencesSpe = () => {
+    let compSpe = useContext(playerContext);
+    compSpe = compSpe.compSpe;
 
   return (
     <View>
       <DataTable>
         <DataTable.Header>
-          <DataTable.Title style={{flex: 2}}>Compétences</DataTable.Title>
+          <DataTable.Title style={{flex: 2}}>Compétences Spéciales</DataTable.Title>
           <DataTable.Title>Stat</DataTable.Title>
           <DataTable.Title>Up !</DataTable.Title>
         </DataTable.Header>
-        {comp.map((item, i) => {
+        {compSpe.map((item, i) => {
           return (
             <DataTable.Row key={i}>
               <DataTable.Cell>{item.name}</DataTable.Cell>
@@ -42,8 +42,9 @@ export const Competences = (props) => {
           );
         })}
       </DataTable>
+      <Button title="Ajouter une compétence" />
     </View>
   );
 };
 
-export default Competences;
+export default CompetencesSpe;

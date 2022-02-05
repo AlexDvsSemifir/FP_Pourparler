@@ -4,26 +4,29 @@ import React, { useContext, useState, useEffect } from "react";
 import { Text, View, Button, FlatList } from "react-native";
 
 // Context :
-import { playerContext, apiAddressContext} from "../ApiProvider/ApiProvider";
+import { playerContext, apiAddressContext, setPlayerContext} from "../ApiProvider/ApiProvider";
 
 const StatButton = (props) => {
   
   let apiAddress = useContext(apiAddressContext)
   const player = useContext(playerContext)
+  const setPlayer = useContext(setPlayerContext)
 
-  const statValue = props.statValue;
   const action = props.action;
-  const index = props.index;
-  const playerId = player.id
-
+  
+  
   const handlePlusPress = () => {
+    const statValue = props.statValue;
+    const index = props.index;
     let newValue = statValue + 1;
-    let playerErase = player
-    playerErase.comp[index].stat = newValue 
+    player.comp[index].stat = newValue 
+    setPlayer(player)
     updatePlayer(player)
   };
-
+  
+  
   const updatePlayer = async (playerErase) => {
+    const playerId = player.id
     apiAddress = apiAddress + playerId
     const resquestOption = {
       method: 'PUT',
@@ -39,7 +42,7 @@ const StatButton = (props) => {
   return (
     <View>
       <Button
-        title={props.action}
+        title={action}
         color="#0d1021"
         onPress={action == "+" ? handlePlusPress : handleMinusPress}
       />

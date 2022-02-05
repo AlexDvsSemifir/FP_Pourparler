@@ -1,16 +1,16 @@
 // React imports :
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Text, View, Button, FlatList } from "react-native";
 
 // Context :
 import { playerContext, apiAddressContext} from "../ApiProvider/ApiProvider";
 
 const StatButton = (props) => {
+  
   let apiAddress = useContext(apiAddressContext)
-  const [player, setPlayer] = useState(useContext(playerContext));
+  const player = useContext(playerContext)
 
-  const statName = props.statName;
   const statValue = props.statValue;
   const action = props.action;
   const index = props.index;
@@ -20,8 +20,7 @@ const StatButton = (props) => {
     let newValue = statValue + 1;
     let playerErase = player
     playerErase.comp[index].stat = newValue 
-    setPlayer(playerErase);
-    updatePlayer(playerErase)
+    updatePlayer(player)
   };
 
   const updatePlayer = async (playerErase) => {
@@ -33,7 +32,6 @@ const StatButton = (props) => {
     }
     const response = await fetch(apiAddress, resquestOption)
     const json = await response.json()
-    setPlayer(json)
   }
 
   const handleMinusPress = () => {};

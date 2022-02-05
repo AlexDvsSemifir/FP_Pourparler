@@ -17,8 +17,7 @@ import StatButton from "../commons/StatButton/StatButton";
 export const Competences = (props) => {
 
   useEffect(() => {
-
-  }, [] )
+  }, [StatButton] )
 
   let comp = useContext(playerContext);
   comp = comp.comp;
@@ -37,16 +36,6 @@ export const Competences = (props) => {
             <DataTable.Row key={i}>
               <DataTable.Cell style={{ flex: 5 }}>{item.name}</DataTable.Cell>
               <DataTable.Cell style={{ flex: 2 }}>{item.stat}</DataTable.Cell>
-              {/* <DataTable.Cell style={{ flex: 1 }}>
-                <Button title="+" color="#0d1021" onPress={handlePlusPress}/>
-                <Button title=" - " color="#0d1021" onPress={handleMinusPress}/>
-              </DataTable.Cell> */}
-              {/* <DataTable.Cell style={{ flex: 1 }} >
-                <Button title="+" color="#0d1021" onPress={console.log(item.stat)}/>
-              </DataTable.Cell>
-              <DataTable.Cell style={{ flex: 1 }} >
-                <Button title=" - " color="#0d1021" onPress={handleMinusPress}/>
-              </DataTable.Cell> */}
               <StatButton
                 action="+"
                 statName={item.name}

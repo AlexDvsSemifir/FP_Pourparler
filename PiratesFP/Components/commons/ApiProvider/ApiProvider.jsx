@@ -16,7 +16,6 @@ let player = {};
 export const playerContext = React.createContext(player);
 export const apiAddressContext = React.createContext(apiAddress);
 
-
 // Component :
 
 export const ApiProvider = () => {
@@ -100,24 +99,25 @@ export const ApiProvider = () => {
    * @param {Event} e
    */
   const handleSubmit = () => {
-    // e.preventDefault();
-    // e.stopPropagation();
     getPlayer(playerSelection);
   };
 
+  const Refresh = () => {
+    getPlayer(playerSelection);
+  }
+
   return (
     <View>
-      <apiAddressContext.Provider value={apiAddress}>
-      <playerContext.Provider value={player}>
-        <HomePage
-          handleSubmit={handleSubmit}
-          handlePlayerSelection={handlePlayerSelection}
-          playerSelection={playerSelection}
-          setPlayerSelection={setPlayerSelection}
-          playerList={playerList}
-        />
-      </playerContext.Provider>
-      </apiAddressContext.Provider>
+        <apiAddressContext.Provider value={apiAddress}>
+          <playerContext.Provider value={player}>
+            <HomePage
+              handleSubmit={handleSubmit}
+              handlePlayerSelection={handlePlayerSelection}
+              playerSelection={playerSelection}
+              playerList={playerList}
+            />
+          </playerContext.Provider>
+        </apiAddressContext.Provider>
     </View>
   );
 };

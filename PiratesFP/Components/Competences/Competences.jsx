@@ -15,9 +15,7 @@ import { playerContext } from "../commons/ApiProvider/ApiProvider";
 import StatButton from "../commons/StatButton/StatButton";
 
 export const Competences = (props) => {
-
-  useEffect(() => {
-  }, [StatButton] )
+  useEffect(() => {}, [StatButton]);
 
   let comp = useContext(playerContext);
   comp = comp.comp;
@@ -42,7 +40,12 @@ export const Competences = (props) => {
                 statValue={item.stat}
                 index={i}
               />
-              <StatButton action=" - " />
+              <StatButton
+                action=" - "
+                statName={item.name}
+                statValue={item.stat}
+                index={i}
+              />
             </DataTable.Row>
           );
         })}

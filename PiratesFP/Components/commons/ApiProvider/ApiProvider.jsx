@@ -102,10 +102,6 @@ export const ApiProvider = () => {
     getPlayer(playerSelection);
   };
 
-  const Refresh = () => {
-    getPlayer(playerSelection);
-  };
-
   return (
     <View>
       <setPlayerContext.Provider value={setPlayer}>

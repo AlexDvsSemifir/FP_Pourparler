@@ -15,6 +15,7 @@ const apiAddress = "http://192.168.0.30:8080/players/";
 let player = {};
 export const playerContext = React.createContext(player);
 
+
 // Component :
 
 export const ApiProvider = () => {

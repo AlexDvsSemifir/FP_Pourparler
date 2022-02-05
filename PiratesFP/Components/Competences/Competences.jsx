@@ -10,27 +10,42 @@ import { DataTable } from "react-native-paper";
 
 import { playerContext } from "../commons/ApiProvider/ApiProvider";
 
+// Component imports : 
+
+import StatButton from "../commons/StatButton/StatButton";
+
 export const Competences = (props) => {
   let comp = useContext(playerContext);
   comp = comp.comp;
+
+
 
   return (
     <View>
       <DataTable>
         <DataTable.Header>
-          <DataTable.Title style={{ flex: 4 }}>Compétences</DataTable.Title>
-          <DataTable.Title style={{ flex: 1 }}>Stat</DataTable.Title>
+          <DataTable.Title style={{ flex: 5 }}>Compétences</DataTable.Title>
+          <DataTable.Title style={{ flex: 2 }}>Stat</DataTable.Title>
           <DataTable.Title style={{ flex: 1 }}>Up !</DataTable.Title>
+          <DataTable.Title style={{ flex: 1 }}>Down !</DataTable.Title>
         </DataTable.Header>
         {comp.map((item, i) => {
           return (
             <DataTable.Row key={i}>
-              <DataTable.Cell style={{ flex: 4 }}>{item.name}</DataTable.Cell>
-              <DataTable.Cell style={{ flex: 1 }}>{item.stat}</DataTable.Cell>
-              <DataTable.Cell style={{ flex: 1 }}>
-                <Button title="+" color="#0d1021" />
-                <Button title=" - " color="#0d1021" />
+              <DataTable.Cell style={{ flex: 5 }}>{item.name}</DataTable.Cell>
+              <DataTable.Cell style={{ flex: 2 }}>{item.stat}</DataTable.Cell>
+              {/* <DataTable.Cell style={{ flex: 1 }}>
+                <Button title="+" color="#0d1021" onPress={handlePlusPress}/>
+                <Button title=" - " color="#0d1021" onPress={handleMinusPress}/>
+              </DataTable.Cell> */}
+              {/* <DataTable.Cell style={{ flex: 1 }} >
+                <Button title="+" color="#0d1021" onPress={console.log(item.stat)}/>
               </DataTable.Cell>
+              <DataTable.Cell style={{ flex: 1 }} >
+                <Button title=" - " color="#0d1021" onPress={handleMinusPress}/>
+              </DataTable.Cell> */}
+              <StatButton action="+" statName={item.name} statValue={item.stat} index={i}/>
+              <StatButton action=" - "/>
             </DataTable.Row>
           );
         })}

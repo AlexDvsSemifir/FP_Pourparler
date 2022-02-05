@@ -17,6 +17,7 @@ let players = require(playersPath);
 
 // Import de fs
 const fs = require("fs");
+const { createImportTypeNode } = require("typescript");
 
 // Définition du port :
 const port = process.env.PORT || 8080;
@@ -57,7 +58,7 @@ app.post("/players", (req, res) => {
 });
 
 
-// player/Id route :
+// player/Id routes :
 
 // GET
 app.get("/players/:id", (req, res) => {
@@ -65,6 +66,7 @@ app.get("/players/:id", (req, res) => {
     const player = players.find((player) => player.id === id);
     res.status(200).json(player);
 });
+
 
 // HEY, LISTEN !
 app.listen(port, () => {

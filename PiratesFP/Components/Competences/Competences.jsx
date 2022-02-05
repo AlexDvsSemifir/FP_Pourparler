@@ -1,6 +1,6 @@
 // React imports :
 
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Text, View, Button, FlatList } from "react-native";
 
 // React Native Paper
@@ -10,15 +10,18 @@ import { DataTable } from "react-native-paper";
 
 import { playerContext } from "../commons/ApiProvider/ApiProvider";
 
-// Component imports : 
+// Component imports :
 
 import StatButton from "../commons/StatButton/StatButton";
 
 export const Competences = (props) => {
+
+  useEffect(() => {
+
+  }, [] )
+
   let comp = useContext(playerContext);
   comp = comp.comp;
-
-
 
   return (
     <View>
@@ -44,8 +47,13 @@ export const Competences = (props) => {
               <DataTable.Cell style={{ flex: 1 }} >
                 <Button title=" - " color="#0d1021" onPress={handleMinusPress}/>
               </DataTable.Cell> */}
-              <StatButton action="+" statName={item.name} statValue={item.stat} index={i}/>
-              <StatButton action=" - "/>
+              <StatButton
+                action="+"
+                statName={item.name}
+                statValue={item.stat}
+                index={i}
+              />
+              <StatButton action=" - " />
             </DataTable.Row>
           );
         })}

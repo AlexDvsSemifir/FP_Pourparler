@@ -52,7 +52,8 @@ const StatButton = (props) => {
       body: JSON.stringify(player),
     };
     const response = await fetch(apiAddress, resquestOption);
-    const json = await response.json();
+    const json = await response.text();
+    console.log(json)
   };
 
 

@@ -34,18 +34,22 @@ export const Competences = (props) => {
             <DataTable.Row key={i}>
               <DataTable.Cell style={{ flex: 5 }}>{item.name}</DataTable.Cell>
               <DataTable.Cell style={{ flex: 2 }}>{item.stat}</DataTable.Cell>
-              <StatButton
-                action="+"
-                statName={item.name}
-                statValue={item.stat}
-                index={i}
-              />
-              <StatButton
-                action=" - "
-                statName={item.name}
-                statValue={item.stat}
-                index={i}
-              />
+              <DataTable.Cell>
+                <StatButton
+                  action="+"
+                  statName={item.name}
+                  statValue={item.stat}
+                  index={i}
+                />
+              </DataTable.Cell>
+              <DataTable.Cell>
+                <StatButton
+                  action=" - "
+                  statName={item.name}
+                  statValue={item.stat}
+                  index={i}
+                />
+              </DataTable.Cell>
             </DataTable.Row>
           );
         })}

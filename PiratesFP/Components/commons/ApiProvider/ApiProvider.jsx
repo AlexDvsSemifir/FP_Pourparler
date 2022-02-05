@@ -18,7 +18,7 @@ export const playerContext = React.createContext(player);
 // Component :
 
 export const ApiProvider = () => {
-  let [playerSelection, setPlayerSelection] = useState(1);
+  let [playerSelection, setPlayerSelection] = useState(0);
 
   const [playerList, setPlayerList] = useState([
     {
@@ -109,6 +109,8 @@ export const ApiProvider = () => {
         <HomePage
           handleSubmit={handleSubmit}
           handlePlayerSelection={handlePlayerSelection}
+          playerSelection={playerSelection}
+          setPlayerSelection={setPlayerSelection}
           playerList={playerList}
         />
       </playerContext.Provider>

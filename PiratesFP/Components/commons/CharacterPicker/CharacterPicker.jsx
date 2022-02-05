@@ -12,17 +12,20 @@ import { Picker } from "@react-native-picker/picker";
 import { Button } from "react-native-paper";
 
 export const CharacterPicker = (props) => {
-  const [itemValue, SetItemValue] = useState(1);
+
+  const [selected, setSelected] = useState(props.playerSelection)
 
   return (
     <View>
       <Picker
-        selected={itemValue}
+        selected={props.playerSelection}
         onValueChange={(itemValue, itemIndex) => {
-          SetItemValue(itemValue);
           props.handlePlayerSelection(itemValue);
+          setSelected(itemValue)
+          console.log(props.playerSelection)
         }}
       >
+        <Picker.Item label={'Sélectionnez un joueur'} value={0}/>
         {props.playerList.map((player) => {
           return (
             <Picker.Item

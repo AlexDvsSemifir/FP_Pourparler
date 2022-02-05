@@ -21,36 +21,25 @@ import {
 } from "accordion-collapse-react-native";
 import CompetencesSpe from "../CompetencesSpe/CompetencesSpe";
 
-
 export const HomePage = (props) => {
-
-  // 
-  const [bioExpanded, setBioExpanded] = useState(true);
+  //
   const [caracExpanded, setCaracExpanded] = useState(false);
-  const [compExpanded, setCompExpanded] = useState(false)
-  const [compSpeExpanded, setCompSpeExpanded] = useState(false)
-  
-  const handleBioExpand = () => {
-    setBioExpanded(!bioExpanded)
-    setCaracExpanded(false)
-    setCompExpanded(false)
-  }
+  const [compExpanded, setCompExpanded] = useState(false);
+  const [compSpeExpanded, setCompSpeExpanded] = useState(false);
+
   const handleCaracExpand = () => {
-    setCaracExpanded(!caracExpanded)
-    setCompExpanded(false)
-    setBioExpanded(false)
-  }
+    setCaracExpanded(!caracExpanded);
+    setCompExpanded(false);
+  };
   const handleCompExpand = () => {
-    setCompExpanded(!compExpanded)
-    setCaracExpanded(false)
-    setBioExpanded(false)
-  }
+    setCompExpanded(!compExpanded);
+    setCaracExpanded(false);
+  };
   const handleCompSpeExpand = () => {
-    setCompSpeExpanded(!compSpeExpanded)
-    setCompExpanded(false)
-    setCaracExpanded(false)
-    setBioExpanded(false)
-  }
+    setCompSpeExpanded(!compSpeExpanded);
+    setCompExpanded(false);
+    setCaracExpanded(false);
+  };
 
   return (
     <View>
@@ -59,17 +48,12 @@ export const HomePage = (props) => {
         handlePlayerSelection={props.handlePlayerSelection}
         playerList={props.playerList}
       />
-      <Collapse isExpanded={bioExpanded}>
-        <CollapseHeader>
-          <Button mode="contained" onPress={handleBioExpand} color="#0d1021">Bio</Button>
-        </CollapseHeader>
-        <CollapseBody>
-          <Bio />
-        </CollapseBody>
-      </Collapse>
+      <Bio />
       <Collapse isExpanded={caracExpanded}>
         <CollapseHeader>
-          <Button mode="contained" onPress={handleCaracExpand} color="#0d1021">Caractéristiques</Button>
+          <Button mode="contained" onPress={handleCaracExpand} color="#0d1021">
+            Caractéristiques
+          </Button>
         </CollapseHeader>
         <CollapseBody>
           <Carac />
@@ -77,7 +61,9 @@ export const HomePage = (props) => {
       </Collapse>
       <Collapse isExpanded={compExpanded}>
         <CollapseHeader>
-          <Button mode="contained" onPress={handleCompExpand} color="#0d1021">Compétences</Button>
+          <Button mode="contained" onPress={handleCompExpand} color="#0d1021">
+            Compétences
+          </Button>
         </CollapseHeader>
         <CollapseBody>
           <Competences />
@@ -85,7 +71,13 @@ export const HomePage = (props) => {
       </Collapse>
       <Collapse isExpanded={compSpeExpanded}>
         <CollapseHeader>
-          <Button mode="contained" onPress={handleCompSpeExpand} color="#0d1021">Compétences Spéciales</Button>
+          <Button
+            mode="contained"
+            onPress={handleCompSpeExpand}
+            color="#0d1021"
+          >
+            Compétences Spéciales
+          </Button>
         </CollapseHeader>
         <CollapseBody>
           <CompetencesSpe />

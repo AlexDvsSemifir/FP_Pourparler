@@ -3,9 +3,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { View } from "react-native";
 
-
 // Component Import :
-import HomePage from '../../HomePage/HomePage'
+import HomePage from "../../HomePage/HomePage";
 
 // API Variable
 
@@ -19,7 +18,6 @@ export const playerContext = React.createContext(player);
 // Component :
 
 export const ApiProvider = () => {
-
   let [playerSelection, setPlayerSelection] = useState(1);
 
   const [playerList, setPlayerList] = useState([
@@ -52,7 +50,7 @@ export const ApiProvider = () => {
 
   /**
    * Récupère un player complet depuis l'API
-   * @param {number} id 
+   * @param {number} id
    */
   const getPlayer = async (id) => {
     try {
@@ -89,7 +87,7 @@ export const ApiProvider = () => {
 
   /**
    * Récupère la sélection du joueur depuis le formulaire
-   * @param {Event} e 
+   * @param {Event} e
    */
   const handlePlayerSelection = (value, index) => {
     setPlayerSelection(value);
@@ -97,19 +95,23 @@ export const ApiProvider = () => {
 
   /**
    * Met à jour le contenu de la page en fonction de la sélection faire par l'utilisateur
-   * @param {Event} e 
+   * @param {Event} e
    */
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleSubmit = () => {
+    // e.preventDefault();
+    // e.stopPropagation();
     getPlayer(playerSelection);
   };
 
   return (
     <View>
-        <playerContext.Provider value={player}>
-        <HomePage handleSubmit={handleSubmit} handlePlayerSelection={handlePlayerSelection} playerList={playerList}/>
-        </playerContext.Provider>
+      <playerContext.Provider value={player}>
+        <HomePage
+          handleSubmit={handleSubmit}
+          handlePlayerSelection={handlePlayerSelection}
+          playerList={playerList}
+        />
+      </playerContext.Provider>
     </View>
   );
 };

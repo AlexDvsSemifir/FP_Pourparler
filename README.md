@@ -47,19 +47,15 @@ cd .\PirateFP
 npm i
 ```
 
-3. Install React Bootstrap
 
-```shell
-npm install react-bootstrap bootstrap@5.1.3
-```
-4. Go to `PirateFP\Components\Commons\ApiProvider\ApiProvider.jsx` and change the `apiAddress` variable to fit your computer's local IP address
+3. Go to `PirateFP\Components\Commons\ApiProvider\ApiProvider.jsx` and change the `apiAddress` variable to fit your computer's local IP address
 Note: If you want to use the app on your computer only, you can use `http://localhost:8080/players` istead. 
 
 5. Start the server :
 
 ```shell
-npm start
+expo start
 ```
 
-6. Once expo-cli started, press 'w' to open the web client. 
+6. Once expo-cli started, press 'w' to open the web client or 'a' to run on android emulator. Scan the QR code to run on your own phone
 

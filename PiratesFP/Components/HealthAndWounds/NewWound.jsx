@@ -27,11 +27,11 @@ const NewWound = (props) => {
     setNewWoundLocation(newWoundLocation);
   };
   const handleNewWoundPvChange = (newWoundPv) => {
-    let pv = parseInt(newWoundPv)
+    let pv = parseInt(newWoundPv);
     if (Number.isInteger(pv)) {
-        setNewWoundPv(pv);
+      setNewWoundPv(pv);
     } else {
-        alert('PV doit être un nombre !')
+      alert("PV doit être un nombre !");
     }
   };
 
@@ -39,14 +39,29 @@ const NewWound = (props) => {
     let woundsUpdate = player.wounds;
     let newWound = { localisation: newWoundLocation, pv: newWoundPv };
     woundsUpdate.push(newWound);
-    console.log(woundsUpdate);
+    let hpUpdate = updateTotalPV();
+    player.wounds = woundsUpdate
+    player.hp = hpUpdate
     setPlayer({
       ...player,
-      wounds: woundsUpdate,
     });
-    console.log(player.wounds);
     updatePlayer(player);
-    props.handleNewWoundExpanded
+    props.handleNewWoundExpanded;
+  };
+
+  const updateTotalPV = () => {
+    let total = 0;
+    player.wounds.map((item, index) => {
+      total = total + item.pv;
+    });
+    let maxHP = player.hp.max;
+    if (total > maxHP) {
+      total = 0;
+    } else {
+      total = maxHP - total;
+    }
+    let hpUpdate = { current: total, max: maxHP };
+    return hpUpdate;
   };
 
   return (

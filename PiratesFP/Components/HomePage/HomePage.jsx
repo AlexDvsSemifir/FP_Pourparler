@@ -1,14 +1,16 @@
 // React imports :
 
 import React, { useState } from "react";
-import { Text, View, Pressable, Touchable } from "react-native";
+import { Text, View, Pressable, Touchable, ImageBackground, StyleSheet, Dimensions } from "react-native";
 
 // Components import
 
 import Bio from "../Bio/Bio";
 import Carac from "../Carac/Carac";
 import Competences from "../Competences/Competences";
+import CompetencesSpe from "../CompetencesSpe/CompetencesSpe";
 import CharacterPicker from "../commons/CharacterPicker/CharacterPicker";
+import PlayerIdentity from "../PlayerIdentity/PlayerIdentity";
 
 // React Native Paper
 import { Button } from "react-native-paper";
@@ -19,28 +21,39 @@ import {
   CollapseHeader,
   CollapseBody,
 } from "accordion-collapse-react-native";
-import CompetencesSpe from "../CompetencesSpe/CompetencesSpe";
 
 export const HomePage = (props) => {
   //
   const [caracExpanded, setCaracExpanded] = useState(false);
   const [compExpanded, setCompExpanded] = useState(false);
   const [compSpeExpanded, setCompSpeExpanded] = useState(false);
+  const [bioExpanded, setBioExpanded] = useState(false);
 
   const handleCaracExpand = () => {
     setCaracExpanded(!caracExpanded);
     setCompExpanded(false);
+    setCompSpeExpanded(false);
+    setBioExpanded(false)
   };
   const handleCompExpand = () => {
     setCompExpanded(!compExpanded);
     setCaracExpanded(false);
+    setCompSpeExpanded(false);
+    setBioExpanded(false)
   };
   const handleCompSpeExpand = () => {
     setCompSpeExpanded(!compSpeExpanded);
     setCompExpanded(false);
     setCaracExpanded(false);
+    setBioExpanded(false)
   };
-
+  const handleBioExpand = () => {
+    setBioExpanded(!bioExpanded)
+    setCompSpeExpanded(false);
+    setCompExpanded(false);
+    setCaracExpanded(false);
+  };
+  
   return (
     <View>
       <CharacterPicker
@@ -48,7 +61,18 @@ export const HomePage = (props) => {
         handlePlayerSelection={props.handlePlayerSelection}
         playerList={props.playerList}
       />
-      <Bio />
+      <PlayerIdentity />
+      <Collapse isExpanded={bioExpanded}>
+        <CollapseHeader>
+          <Button mode="contained" onPress={handleBioExpand} color="#0d1021">
+            Bio
+          </Button>
+        </CollapseHeader>
+        <CollapseBody>
+          <Bio />
+        </CollapseBody>
+      </Collapse>
+
       <Collapse isExpanded={caracExpanded}>
         <CollapseHeader>
           <Button mode="contained" onPress={handleCaracExpand} color="#0d1021">
@@ -59,6 +83,7 @@ export const HomePage = (props) => {
           <Carac />
         </CollapseBody>
       </Collapse>
+
       <Collapse isExpanded={compExpanded}>
         <CollapseHeader>
           <Button mode="contained" onPress={handleCompExpand} color="#0d1021">
@@ -69,6 +94,7 @@ export const HomePage = (props) => {
           <Competences />
         </CollapseBody>
       </Collapse>
+      
       <Collapse isExpanded={compSpeExpanded}>
         <CollapseHeader>
           <Button

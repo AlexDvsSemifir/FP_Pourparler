@@ -1,7 +1,13 @@
 // React imports :
 
 import React, { useState, useEffect, useContext } from "react";
-import { View } from "react-native";
+import {
+  View,
+  ImageBackground,
+  StyleSheet,
+  Dimensions,
+  ScrollView,
+} from "react-native";
 
 // Component Import :
 import HomePage from "../../HomePage/HomePage";
@@ -103,18 +109,26 @@ export const ApiProvider = () => {
     getPlayer(playerSelection);
   };
 
+  const BackgroundImage = {};
+
   return (
     <View>
       <setPlayerContext.Provider value={setPlayer}>
         <apiAddressContext.Provider value={apiAddress}>
           <playerContext.Provider value={player}>
             <playerSelectionContext.Provider value={playerSelection}>
-              <HomePage
-                handleSubmit={handleSubmit}
-                handlePlayerSelection={handlePlayerSelection}
-                playerSelection={playerSelection}
-                playerList={playerList}
+              <ImageBackground
+                style={[styles.containter, { zIndex: -1 }]}
+                source={require("../../../src/img/Background.jpg")}
               />
+              <ScrollView style={[styles.scrollview]}>
+                <HomePage
+                  handleSubmit={handleSubmit}
+                  handlePlayerSelection={handlePlayerSelection}
+                  playerSelection={playerSelection}
+                  playerList={playerList}
+                />
+              </ScrollView>
             </playerSelectionContext.Provider>
           </playerContext.Provider>
         </apiAddressContext.Provider>
@@ -124,3 +138,18 @@ export const ApiProvider = () => {
 };
 
 export default ApiProvider;
+
+const styles = StyleSheet.create({
+  containter: {
+    width: Dimensions.get("window").width, //for full screen
+    height: Dimensions.get("window").height, //for full screen
+  },
+  scrollview: {
+    backgroundColor: "transparent",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+});

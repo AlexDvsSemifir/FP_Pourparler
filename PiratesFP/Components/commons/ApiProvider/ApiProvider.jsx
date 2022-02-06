@@ -15,6 +15,7 @@ const apiAddress = "http://192.168.0.30:8080/players/";
 export const playerContext = React.createContext();
 export const apiAddressContext = React.createContext();
 export const setPlayerContext = React.createContext();
+export const playerSelectionContext = React.createContext();
 
 // Component :
 
@@ -107,12 +108,14 @@ export const ApiProvider = () => {
       <setPlayerContext.Provider value={setPlayer}>
         <apiAddressContext.Provider value={apiAddress}>
           <playerContext.Provider value={player}>
-            <HomePage
-              handleSubmit={handleSubmit}
-              handlePlayerSelection={handlePlayerSelection}
-              playerSelection={playerSelection}
-              playerList={playerList}
-            />
+            <playerSelectionContext.Provider value={playerSelection}>
+              <HomePage
+                handleSubmit={handleSubmit}
+                handlePlayerSelection={handlePlayerSelection}
+                playerSelection={playerSelection}
+                playerList={playerList}
+              />
+            </playerSelectionContext.Provider>
           </playerContext.Provider>
         </apiAddressContext.Provider>
       </setPlayerContext.Provider>

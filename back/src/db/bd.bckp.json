@@ -19,188 +19,186 @@
       "des": 4,
       "for": 4
     },
-    "comp" : [
+    "comp": [
       {
-        "id" :"abLegr",
+        "id": "abLegr",
         "name": "Armes bl. (légères)",
-        "stat" : 20
+        "stat": 20
       },
-        
-      {
-        "id" :"abLd",
-        "name": "Armes bl. (lourdes)",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"aF",
-        "name": "Armes à feu",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"arti",
-        "name": "Artisanat",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"comm",
-        "name": "Commandement",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"croch",
-        "name": "Crochetage",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"degui",
-        "name": "Déguisement",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"disc",
-        "name": "Discrétion",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"edu",
-        "name": "Education",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"end",
-        "name": "Endurance",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"equ",
-        "name": "Equitation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"escal",
-        "name": "Escalade",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"escam",
-        "name": "Escamotage",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"esqu",
-        "name": "Esquive",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"eval",
-        "name": "Evaluation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"inti",
-        "name": "Intimidation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"jeu",
-        "name": "Jeu",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"nat",
-        "name": "Natation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"navi",
-        "name": "Navigation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"ori",
-        "name": "Orientation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"perc",
-        "name": "Perception",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"pers",
-        "name": "Persicacité",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"pist",
-        "name": "Pistage",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"pug",
-        "name": "Pugilat",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"rech",
-        "name": "Recherches",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"resAl",
-        "name": "Resistance à l'alcool",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"rhet",
-        "name": "Rhétorique",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"sed",
-        "name": "Séduction",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"soi",
-        "name": "Soins",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"surv",
-        "name": "Survie",
-        "stat" : 20
-      }
-        
 
+      {
+        "id": "abLd",
+        "name": "Armes bl. (lourdes)",
+        "stat": 20
+      },
+
+      {
+        "id": "aF",
+        "name": "Armes à feu",
+        "stat": 20
+      },
+
+      {
+        "id": "arti",
+        "name": "Artisanat",
+        "stat": 20
+      },
+
+      {
+        "id": "comm",
+        "name": "Commandement",
+        "stat": 20
+      },
+
+      {
+        "id": "croch",
+        "name": "Crochetage",
+        "stat": 20
+      },
+
+      {
+        "id": "degui",
+        "name": "Déguisement",
+        "stat": 20
+      },
+
+      {
+        "id": "disc",
+        "name": "Discrétion",
+        "stat": 20
+      },
+
+      {
+        "id": "edu",
+        "name": "Education",
+        "stat": 20
+      },
+
+      {
+        "id": "end",
+        "name": "Endurance",
+        "stat": 20
+      },
+
+      {
+        "id": "equ",
+        "name": "Equitation",
+        "stat": 20
+      },
+
+      {
+        "id": "escal",
+        "name": "Escalade",
+        "stat": 20
+      },
+
+      {
+        "id": "escam",
+        "name": "Escamotage",
+        "stat": 20
+      },
+
+      {
+        "id": "esqu",
+        "name": "Esquive",
+        "stat": 20
+      },
+
+      {
+        "id": "eval",
+        "name": "Evaluation",
+        "stat": 20
+      },
+
+      {
+        "id": "inti",
+        "name": "Intimidation",
+        "stat": 20
+      },
+
+      {
+        "id": "jeu",
+        "name": "Jeu",
+        "stat": 20
+      },
+
+      {
+        "id": "nat",
+        "name": "Natation",
+        "stat": 20
+      },
+
+      {
+        "id": "navi",
+        "name": "Navigation",
+        "stat": 20
+      },
+
+      {
+        "id": "ori",
+        "name": "Orientation",
+        "stat": 20
+      },
+
+      {
+        "id": "perc",
+        "name": "Perception",
+        "stat": 20
+      },
+
+      {
+        "id": "pers",
+        "name": "Persicacité",
+        "stat": 20
+      },
+
+      {
+        "id": "pist",
+        "name": "Pistage",
+        "stat": 20
+      },
+
+      {
+        "id": "pug",
+        "name": "Pugilat",
+        "stat": 20
+      },
+
+      {
+        "id": "rech",
+        "name": "Recherches",
+        "stat": 20
+      },
+
+      {
+        "id": "resAl",
+        "name": "Resistance à l'alcool",
+        "stat": 20
+      },
+
+      {
+        "id": "rhet",
+        "name": "Rhétorique",
+        "stat": 20
+      },
+
+      {
+        "id": "sed",
+        "name": "Séduction",
+        "stat": 20
+      },
+
+      {
+        "id": "soi",
+        "name": "Soins",
+        "stat": 20
+      },
+
+      {
+        "id": "surv",
+        "name": "Survie",
+        "stat": 20
+      }
     ],
     "compSpe": [
       {
@@ -212,7 +210,7 @@
         "stat": 50
       }
     ],
-    "talents" :[
+    "talents": [
       {
         "name": "Touché par la grâce",
         "Description": "Avantage sur jet chance"
@@ -276,7 +274,6 @@
         "spec": ""
       }
     }
-
   },
   {
     "id": 2,
@@ -298,188 +295,186 @@
       "des": 4,
       "for": 4
     },
-    "comp" : [
+    "comp": [
       {
-        "id" :"abLegr",
+        "id": "abLegr",
         "name": "Armes bl. (légères)",
-        "stat" : 20
+        "stat": 20
       },
-        
-      {
-        "id" :"abLd",
-        "name": "Armes bl. (lourdes)",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"aF",
-        "name": "Armes à feu",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"arti",
-        "name": "Artisanat",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"comm",
-        "name": "Commandement",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"croch",
-        "name": "Crochetage",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"degui",
-        "name": "Déguisement",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"disc",
-        "name": "Discrétion",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"edu",
-        "name": "Education",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"end",
-        "name": "Endurance",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"equ",
-        "name": "Equitation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"escal",
-        "name": "Escalade",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"escam",
-        "name": "Escamotage",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"esqu",
-        "name": "Esquive",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"eval",
-        "name": "Evaluation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"inti",
-        "name": "Intimidation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"jeu",
-        "name": "Jeu",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"nat",
-        "name": "Natation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"navi",
-        "name": "Navigation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"ori",
-        "name": "Orientation",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"perc",
-        "name": "Perception",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"pers",
-        "name": "Persicacité",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"pist",
-        "name": "Pistage",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"pug",
-        "name": "Pugilat",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"rech",
-        "name": "Recherches",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"resAl",
-        "name": "Resistance à l'alcool",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"rhet",
-        "name": "Rhétorique",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"sed",
-        "name": "Séduction",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"soi",
-        "name": "Soins",
-        "stat" : 20
-      },
-        
-      {
-        "id" :"surv",
-        "name": "Survie",
-        "stat" : 20
-      }
-        
 
+      {
+        "id": "abLd",
+        "name": "Armes bl. (lourdes)",
+        "stat": 20
+      },
+
+      {
+        "id": "aF",
+        "name": "Armes à feu",
+        "stat": 20
+      },
+
+      {
+        "id": "arti",
+        "name": "Artisanat",
+        "stat": 20
+      },
+
+      {
+        "id": "comm",
+        "name": "Commandement",
+        "stat": 20
+      },
+
+      {
+        "id": "croch",
+        "name": "Crochetage",
+        "stat": 20
+      },
+
+      {
+        "id": "degui",
+        "name": "Déguisement",
+        "stat": 20
+      },
+
+      {
+        "id": "disc",
+        "name": "Discrétion",
+        "stat": 20
+      },
+
+      {
+        "id": "edu",
+        "name": "Education",
+        "stat": 20
+      },
+
+      {
+        "id": "end",
+        "name": "Endurance",
+        "stat": 20
+      },
+
+      {
+        "id": "equ",
+        "name": "Equitation",
+        "stat": 20
+      },
+
+      {
+        "id": "escal",
+        "name": "Escalade",
+        "stat": 20
+      },
+
+      {
+        "id": "escam",
+        "name": "Escamotage",
+        "stat": 20
+      },
+
+      {
+        "id": "esqu",
+        "name": "Esquive",
+        "stat": 20
+      },
+
+      {
+        "id": "eval",
+        "name": "Evaluation",
+        "stat": 20
+      },
+
+      {
+        "id": "inti",
+        "name": "Intimidation",
+        "stat": 20
+      },
+
+      {
+        "id": "jeu",
+        "name": "Jeu",
+        "stat": 20
+      },
+
+      {
+        "id": "nat",
+        "name": "Natation",
+        "stat": 20
+      },
+
+      {
+        "id": "navi",
+        "name": "Navigation",
+        "stat": 20
+      },
+
+      {
+        "id": "ori",
+        "name": "Orientation",
+        "stat": 20
+      },
+
+      {
+        "id": "perc",
+        "name": "Perception",
+        "stat": 20
+      },
+
+      {
+        "id": "pers",
+        "name": "Persicacité",
+        "stat": 20
+      },
+
+      {
+        "id": "pist",
+        "name": "Pistage",
+        "stat": 20
+      },
+
+      {
+        "id": "pug",
+        "name": "Pugilat",
+        "stat": 20
+      },
+
+      {
+        "id": "rech",
+        "name": "Recherches",
+        "stat": 20
+      },
+
+      {
+        "id": "resAl",
+        "name": "Resistance à l'alcool",
+        "stat": 20
+      },
+
+      {
+        "id": "rhet",
+        "name": "Rhétorique",
+        "stat": 20
+      },
+
+      {
+        "id": "sed",
+        "name": "Séduction",
+        "stat": 20
+      },
+
+      {
+        "id": "soi",
+        "name": "Soins",
+        "stat": 20
+      },
+
+      {
+        "id": "surv",
+        "name": "Survie",
+        "stat": 20
+      }
     ],
     "compSpe": [
       {
@@ -491,7 +486,7 @@
         "stat": 50
       }
     ],
-    "talents" :[
+    "talents": [
       {
         "name": "Aguicheuse",
         "Description": "Avantage sur jet Charisme pour séduire"
@@ -555,6 +550,5 @@
         "spec": ""
       }
     }
-
   }
 ]

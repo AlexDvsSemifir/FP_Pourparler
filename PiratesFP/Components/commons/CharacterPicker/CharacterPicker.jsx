@@ -3,26 +3,19 @@
 import React, { useState } from "react";
 import { View } from "react-native";
 
-// Bootstrap imports :
-// import { Button, Form, FormGroup, FormSelect } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
+// Other :
 import { Picker } from "@react-native-picker/picker";
-// React Native Paper
 import { Button } from "react-native-paper";
 
 export const CharacterPicker = (props) => {
 
-  const [selected, setSelected] = useState(props.playerSelection)
 
   return (
     <View>
       <Picker
-        selected={props.playerSelection}
+        selectedValue={props.playerSelection}
         onValueChange={(itemValue, itemIndex) => {
           props.handlePlayerSelection(itemValue);
-          setSelected(itemValue)
-          console.log(props.playerSelection)
         }}
       >
         <Picker.Item label={'Sélectionnez un joueur'} value={0}/>

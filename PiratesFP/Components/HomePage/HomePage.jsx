@@ -13,7 +13,7 @@ import CharacterPicker from "../commons/CharacterPicker/CharacterPicker";
 import PlayerIdentity from "../PlayerIdentity/PlayerIdentity";
 
 // React Native Paper
-import { Button } from "react-native-paper";
+import { Button, Divider } from "react-native-paper";
 
 // COllapse React Native
 import {
@@ -21,6 +21,7 @@ import {
   CollapseHeader,
   CollapseBody,
 } from "accordion-collapse-react-native";
+import HealthAndWounds from "../HealthAndWounds/HealthAndWounds";
 
 export const HomePage = (props) => {
   //
@@ -60,18 +61,12 @@ export const HomePage = (props) => {
         handleSubmit={props.handleSubmit}
         handlePlayerSelection={props.handlePlayerSelection}
         playerList={props.playerList}
+        playerSelection={props.playerSelection}
       />
       <PlayerIdentity />
-      <Collapse isExpanded={bioExpanded}>
-        <CollapseHeader>
-          <Button mode="contained" onPress={handleBioExpand} color="#0d1021">
-            Bio
-          </Button>
-        </CollapseHeader>
-        <CollapseBody>
-          <Bio />
-        </CollapseBody>
-      </Collapse>
+      <Divider />
+        <Text></Text>
+      <HealthAndWounds />
 
       <Collapse isExpanded={caracExpanded}>
         <CollapseHeader>

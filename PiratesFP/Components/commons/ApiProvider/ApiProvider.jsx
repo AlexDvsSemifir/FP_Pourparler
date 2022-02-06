@@ -19,9 +19,10 @@ const apiAddress = "http://192.168.0.30:8080/players/";
 // Context création :
 
 export const playerContext = React.createContext();
-export const apiAddressContext = React.createContext();
 export const setPlayerContext = React.createContext();
 export const playerSelectionContext = React.createContext();
+export const refreshContext = React.createContext();
+export const updatePlayerContext = React.createContext();
 
 // Component :
 
@@ -40,6 +41,8 @@ export const ApiProvider = () => {
     bio: "",
     carac: "",
     comp: [],
+    hp: {},
+    wounds: [],
     compSpe: [],
     talents: [],
     money: "",
@@ -109,30 +112,48 @@ export const ApiProvider = () => {
     getPlayer(playerSelection);
   };
 
+  const updatePlayer = async (player) => {
+    try {
+      const address = apiAddress + playerSelection;
+      const resquestOption = {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(player),
+      };
+      const response = await fetch(address, resquestOption);
+      const json = await response.text();
+      console.log(json);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const BackgroundImage = {};
 
   return (
     <View>
-      <setPlayerContext.Provider value={setPlayer}>
-        <apiAddressContext.Provider value={apiAddress}>
-          <playerContext.Provider value={player}>
-            <playerSelectionContext.Provider value={playerSelection}>
-              <ImageBackground
-                style={[styles.containter, { zIndex: -1 }]}
-                source={require("../../../src/img/Background.jpg")}
-              />
-              <ScrollView style={[styles.scrollview]}>
-                <HomePage
-                  handleSubmit={handleSubmit}
-                  handlePlayerSelection={handlePlayerSelection}
-                  playerSelection={playerSelection}
-                  playerList={playerList}
-                />
-              </ScrollView>
-            </playerSelectionContext.Provider>
-          </playerContext.Provider>
-        </apiAddressContext.Provider>
-      </setPlayerContext.Provider>
+      <updatePlayerContext.Provider value={updatePlayer}>
+        <refreshContext.Provider value={handleSubmit}>
+          <setPlayerContext.Provider value={setPlayer}>
+              <playerContext.Provider value={player}>
+                <playerSelectionContext.Provider value={playerSelection}>
+                  <ImageBackground
+                    style={[styles.containter, { zIndex: -1 }]}
+                    source={require("../../../src/img/Background.jpg")}
+                  />
+                  <ScrollView style={[styles.scrollview]}>
+                    <HomePage
+                      handleSubmit={handleSubmit}
+                      handlePlayerSelection={handlePlayerSelection}
+                      playerSelection={playerSelection}
+                      playerList={playerList}
+                    />
+                  </ScrollView>
+                </playerSelectionContext.Provider>
+              </playerContext.Provider>
+          </setPlayerContext.Provider>
+        </refreshContext.Provider>
+      </updatePlayerContext.Provider>
     </View>
   );
 };

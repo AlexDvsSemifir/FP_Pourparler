@@ -1,288 +1,13 @@
 [
   {
-    "id": 1,
-    "bio": {
-      "firstName": "Stefan",
-      "lastName": "",
-      "age": 40,
-      "description": "Très con mais très puissant",
-      "psychologie": "stupide"
-    },
-    "carac": {
-      "cha": 20,
-      "str": 90,
-      "ins": 90,
-      "int": 20,
-      "mob": 20,
-      "vig": 90,
-      "wil": 20,
-      "des": 4,
-      "for": 4
-    },
-    "comp": [
-      {
-        "id": "abLegr",
-        "name": "Armes bl. (légères)",
-        "stat": 20
-      },
-
-      {
-        "id": "abLd",
-        "name": "Armes bl. (lourdes)",
-        "stat": 20
-      },
-
-      {
-        "id": "aF",
-        "name": "Armes à feu",
-        "stat": 20
-      },
-
-      {
-        "id": "arti",
-        "name": "Artisanat",
-        "stat": 20
-      },
-
-      {
-        "id": "comm",
-        "name": "Commandement",
-        "stat": 20
-      },
-
-      {
-        "id": "croch",
-        "name": "Crochetage",
-        "stat": 20
-      },
-
-      {
-        "id": "degui",
-        "name": "Déguisement",
-        "stat": 20
-      },
-
-      {
-        "id": "disc",
-        "name": "Discrétion",
-        "stat": 20
-      },
-
-      {
-        "id": "edu",
-        "name": "Education",
-        "stat": 20
-      },
-
-      {
-        "id": "end",
-        "name": "Endurance",
-        "stat": 20
-      },
-
-      {
-        "id": "equ",
-        "name": "Equitation",
-        "stat": 20
-      },
-
-      {
-        "id": "escal",
-        "name": "Escalade",
-        "stat": 20
-      },
-
-      {
-        "id": "escam",
-        "name": "Escamotage",
-        "stat": 20
-      },
-
-      {
-        "id": "esqu",
-        "name": "Esquive",
-        "stat": 20
-      },
-
-      {
-        "id": "eval",
-        "name": "Evaluation",
-        "stat": 20
-      },
-
-      {
-        "id": "inti",
-        "name": "Intimidation",
-        "stat": 20
-      },
-
-      {
-        "id": "jeu",
-        "name": "Jeu",
-        "stat": 20
-      },
-
-      {
-        "id": "nat",
-        "name": "Natation",
-        "stat": 20
-      },
-
-      {
-        "id": "navi",
-        "name": "Navigation",
-        "stat": 20
-      },
-
-      {
-        "id": "ori",
-        "name": "Orientation",
-        "stat": 20
-      },
-
-      {
-        "id": "perc",
-        "name": "Perception",
-        "stat": 20
-      },
-
-      {
-        "id": "pers",
-        "name": "Persicacité",
-        "stat": 20
-      },
-
-      {
-        "id": "pist",
-        "name": "Pistage",
-        "stat": 20
-      },
-
-      {
-        "id": "pug",
-        "name": "Pugilat",
-        "stat": 20
-      },
-
-      {
-        "id": "rech",
-        "name": "Recherches",
-        "stat": 20
-      },
-
-      {
-        "id": "resAl",
-        "name": "Resistance à l'alcool",
-        "stat": 20
-      },
-
-      {
-        "id": "rhet",
-        "name": "Rhétorique",
-        "stat": 20
-      },
-
-      {
-        "id": "sed",
-        "name": "Séduction",
-        "stat": 20
-      },
-
-      {
-        "id": "soi",
-        "name": "Soins",
-        "stat": 20
-      },
-
-      {
-        "id": "surv",
-        "name": "Survie",
-        "stat": 20
-      }
-    ],
-    "compSpe": [
-      {
-        "name": "Culture de la terre",
-        "stat": 90
-      },
-      {
-        "name": "Aide des Dieux",
-        "stat": 50
-      }
-    ],
-    "talents": [
-      {
-        "name": "Touché par la grâce",
-        "Description": "Avantage sur jet chance"
-      }
-    ],
-    "money": {
-      "R": 0,
-      "P8": 0,
-      "D": 0
-    },
-    "inventory": {
-      "loot": {
-        "slot01": "",
-        "slot02": "",
-        "slot03": "",
-        "slot04": "",
-        "slot05": "",
-        "slot06": "",
-        "slot07": "",
-        "slot08": "",
-        "slot09": "",
-        "slot10": ""
-      },
-      "cloth": {
-        "head": "Chapeau de paille",
-        "chest": "Chemise médiocre",
-        "legs": "Pantalon médiocre",
-        "vest": "",
-        "boots": ""
-      }
-    },
-    "weapons": {
-      "slot1": {
-        "name": "Fourche",
-        "type": "Arme lourde",
-        "roll": "1d8 + DR",
-        "spec": ""
-      },
-      "slot2": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
-      },
-      "slot3": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
-      },
-      "slot4": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
-      },
-      "slot5": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
-      }
-    }
-  },
-  {
     "id": 2,
     "bio": {
       "firstName": "Dame Mevanwi",
       "lastName": "",
       "age": 35,
       "description": "Salope sadique",
-      "psychologie": "Fuyez !"
+      "psychologie": "Fuyez !",
+      "surname": "La traitresse"
     },
     "carac": {
       "cha": 80,
@@ -295,196 +20,55 @@
       "des": 4,
       "for": 4
     },
-    "comp": [
+    "hp": {
+      "current": 20,
+      "max": 20
+    },
+    "wounds": [
       {
-        "id": "abLegr",
-        "name": "Armes bl. (légères)",
-        "stat": 20
+        "localisation": "Bras",
+        "pv": 5
       },
-
       {
-        "id": "abLd",
-        "name": "Armes bl. (lourdes)",
-        "stat": 20
-      },
-
-      {
-        "id": "aF",
-        "name": "Armes à feu",
-        "stat": 20
-      },
-
-      {
-        "id": "arti",
-        "name": "Artisanat",
-        "stat": 20
-      },
-
-      {
-        "id": "comm",
-        "name": "Commandement",
-        "stat": 20
-      },
-
-      {
-        "id": "croch",
-        "name": "Crochetage",
-        "stat": 20
-      },
-
-      {
-        "id": "degui",
-        "name": "Déguisement",
-        "stat": 20
-      },
-
-      {
-        "id": "disc",
-        "name": "Discrétion",
-        "stat": 20
-      },
-
-      {
-        "id": "edu",
-        "name": "Education",
-        "stat": 20
-      },
-
-      {
-        "id": "end",
-        "name": "Endurance",
-        "stat": 20
-      },
-
-      {
-        "id": "equ",
-        "name": "Equitation",
-        "stat": 20
-      },
-
-      {
-        "id": "escal",
-        "name": "Escalade",
-        "stat": 20
-      },
-
-      {
-        "id": "escam",
-        "name": "Escamotage",
-        "stat": 20
-      },
-
-      {
-        "id": "esqu",
-        "name": "Esquive",
-        "stat": 20
-      },
-
-      {
-        "id": "eval",
-        "name": "Evaluation",
-        "stat": 20
-      },
-
-      {
-        "id": "inti",
-        "name": "Intimidation",
-        "stat": 20
-      },
-
-      {
-        "id": "jeu",
-        "name": "Jeu",
-        "stat": 20
-      },
-
-      {
-        "id": "nat",
-        "name": "Natation",
-        "stat": 20
-      },
-
-      {
-        "id": "navi",
-        "name": "Navigation",
-        "stat": 20
-      },
-
-      {
-        "id": "ori",
-        "name": "Orientation",
-        "stat": 20
-      },
-
-      {
-        "id": "perc",
-        "name": "Perception",
-        "stat": 20
-      },
-
-      {
-        "id": "pers",
-        "name": "Persicacité",
-        "stat": 20
-      },
-
-      {
-        "id": "pist",
-        "name": "Pistage",
-        "stat": 20
-      },
-
-      {
-        "id": "pug",
-        "name": "Pugilat",
-        "stat": 20
-      },
-
-      {
-        "id": "rech",
-        "name": "Recherches",
-        "stat": 20
-      },
-
-      {
-        "id": "resAl",
-        "name": "Resistance à l'alcool",
-        "stat": 20
-      },
-
-      {
-        "id": "rhet",
-        "name": "Rhétorique",
-        "stat": 20
-      },
-
-      {
-        "id": "sed",
-        "name": "Séduction",
-        "stat": 20
-      },
-
-      {
-        "id": "soi",
-        "name": "Soins",
-        "stat": 20
-      },
-
-      {
-        "id": "surv",
-        "name": "Survie",
-        "stat": 20
+        "localisation": "Tête",
+        "pv": 1
       }
     ],
+    "comp": [
+      { "id": "abLegr", "name": "Armes bl. (légères)", "stat": 70 },
+      { "id": "abLd", "name": "Armes bl. (lourdes)", "stat": 20 },
+      { "id": "aF", "name": "Armes à feu", "stat": 20 },
+      { "id": "arti", "name": "Artisanat", "stat": 20 },
+      { "id": "comm", "name": "Commandement", "stat": 20 },
+      { "id": "croch", "name": "Crochetage", "stat": 20 },
+      { "id": "degui", "name": "Déguisement", "stat": 20 },
+      { "id": "disc", "name": "Discrétion", "stat": 20 },
+      { "id": "edu", "name": "Education", "stat": 20 },
+      { "id": "end", "name": "Endurance", "stat": 20 },
+      { "id": "equ", "name": "Equitation", "stat": 20 },
+      { "id": "escal", "name": "Escalade", "stat": 20 },
+      { "id": "escam", "name": "Escamotage", "stat": 20 },
+      { "id": "esqu", "name": "Esquive", "stat": 20 },
+      { "id": "eval", "name": "Evaluation", "stat": 20 },
+      { "id": "inti", "name": "Intimidation", "stat": 20 },
+      { "id": "jeu", "name": "Jeu", "stat": 20 },
+      { "id": "nat", "name": "Natation", "stat": 20 },
+      { "id": "navi", "name": "Navigation", "stat": 20 },
+      { "id": "ori", "name": "Orientation", "stat": 20 },
+      { "id": "perc", "name": "Perception", "stat": 20 },
+      { "id": "pers", "name": "Persicacité", "stat": 20 },
+      { "id": "pist", "name": "Pistage", "stat": 20 },
+      { "id": "pug", "name": "Pugilat", "stat": 20 },
+      { "id": "rech", "name": "Recherches", "stat": 20 },
+      { "id": "resAl", "name": "Resistance à l'alcool", "stat": 20 },
+      { "id": "rhet", "name": "Rhétorique", "stat": 56 },
+      { "id": "sed", "name": "Séduction", "stat": 20 },
+      { "id": "soi", "name": "Soins", "stat": 20 },
+      { "id": "surv", "name": "Survie", "stat": 20 }
+    ],
     "compSpe": [
-      {
-        "name": "Hypnotiser",
-        "stat": 90
-      },
-      {
-        "name": "Petit feu",
-        "stat": 50
-      }
+      { "name": "Hypnotiser", "stat": 90 },
+      { "name": "Petit feu", "stat": 50 }
     ],
     "talents": [
       {
@@ -492,11 +76,7 @@
         "Description": "Avantage sur jet Charisme pour séduire"
       }
     ],
-    "money": {
-      "R": 0,
-      "P8": 0,
-      "D": 0
-    },
+    "money": { "R": 0, "P8": 0, "D": 0 },
     "inventory": {
       "loot": {
         "slot01": "",
@@ -518,37 +98,119 @@
         "boots": ""
       }
     },
-    "weapons": {
-      "slot1": {
-        "name": "Fourche",
-        "type": "Arme lourde",
-        "roll": "1d8 + DR",
-        "spec": ""
+    "weapons": [
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" }
+    ]
+  },
+  {
+    "id": 1,
+    "bio": {
+      "firstName": "Stefan",
+      "lastName": "",
+      "age": 40,
+      "description": "Très con mais très puissant",
+      "psychologie": "stupide",
+      "surname": "Le débile béni"
+    },
+    "carac": {
+      "cha": 20,
+      "str": 90,
+      "ins": 90,
+      "int": 20,
+      "mob": 20,
+      "vig": 90,
+      "wil": 20,
+      "des": 4,
+      "for": 4
+    },
+    "hp": {
+      "current": 20,
+      "max": 20
+    },
+    "wounds": [
+      {
+        "localisation": "Bras gauche",
+        "pv": 2
       },
-      "slot2": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
-      },
-      "slot3": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
-      },
-      "slot4": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
-      },
-      "slot5": {
-        "name": "",
-        "type": "",
-        "roll": "",
-        "spec": ""
+      {
+        "localisation": "Buste",
+        "pv": 1
       }
-    }
+    ],
+    "comp": [
+      { "id": "abLegr", "name": "Armes bl. (légères)", "stat": 75 },
+      { "id": "abLd", "name": "Armes bl. (lourdes)", "stat": 20 },
+      { "id": "aF", "name": "Armes à feu", "stat": 20 },
+      { "id": "arti", "name": "Artisanat", "stat": 20 },
+      { "id": "comm", "name": "Commandement", "stat": 22 },
+      { "id": "croch", "name": "Crochetage", "stat": 20 },
+      { "id": "degui", "name": "Déguisement", "stat": 20 },
+      { "id": "disc", "name": "Discrétion", "stat": 20 },
+      { "id": "edu", "name": "Education", "stat": 20 },
+      { "id": "end", "name": "Endurance", "stat": 20 },
+      { "id": "equ", "name": "Equitation", "stat": 20 },
+      { "id": "escal", "name": "Escalade", "stat": 20 },
+      { "id": "escam", "name": "Escamotage", "stat": 20 },
+      { "id": "esqu", "name": "Esquive", "stat": 20 },
+      { "id": "eval", "name": "Evaluation", "stat": 20 },
+      { "id": "inti", "name": "Intimidation", "stat": 20 },
+      { "id": "jeu", "name": "Jeu", "stat": 20 },
+      { "id": "nat", "name": "Natation", "stat": 20 },
+      { "id": "navi", "name": "Navigation", "stat": 20 },
+      { "id": "ori", "name": "Orientation", "stat": 20 },
+      { "id": "perc", "name": "Perception", "stat": 20 },
+      { "id": "pers", "name": "Persicacité", "stat": 20 },
+      { "id": "pist", "name": "Pistage", "stat": 20 },
+      { "id": "pug", "name": "Pugilat", "stat": 20 },
+      { "id": "rech", "name": "Recherches", "stat": 20 },
+      { "id": "resAl", "name": "Resistance à l'alcool", "stat": 20 },
+      { "id": "rhet", "name": "Rhétorique", "stat": 20 },
+      { "id": "sed", "name": "Séduction", "stat": 20 },
+      { "id": "soi", "name": "Soins", "stat": 20 },
+      { "id": "surv", "name": "Survie", "stat": 20 }
+    ],
+    "compSpe": [
+      { "name": "Culture de la terre", "stat": 90 },
+      { "name": "Aide des Dieux", "stat": 50 }
+    ],
+    "talents": [
+      {
+        "name": "Touché par la grâce",
+        "Description": "Avantage sur jet chance"
+      }
+    ],
+    "money": { "R": 0, "P8": 0, "D": 0 },
+    "inventory": {
+      "loot": {
+        "slot01": "",
+        "slot02": "",
+        "slot03": "",
+        "slot04": "",
+        "slot05": "",
+        "slot06": "",
+        "slot07": "",
+        "slot08": "",
+        "slot09": "",
+        "slot10": ""
+      },
+      "cloth": {
+        "head": "Chapeau de paille",
+        "chest": "Chemise médiocre",
+        "legs": "Pantalon médiocre",
+        "vest": "",
+        "boots": ""
+      }
+    },
+    "weapons": [
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" },
+      { "name": "", "type": "", "roll": "", "Spec": "" }
+    ]
   }
 ]

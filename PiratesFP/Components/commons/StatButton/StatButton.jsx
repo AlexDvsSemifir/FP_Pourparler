@@ -6,24 +6,24 @@ import { Text, View, Button, FlatList } from "react-native";
 // Context :
 import {
   playerContext,
-  apiAddressContext,
   setPlayerContext,
-  playerSelectionContext,
+  refreshContext,
+  updatePlayerContext
 } from "../ApiProvider/ApiProvider";
 
 const StatButton = (props) => {
 
   const [disabled, setDisabled] = useState(false);
   
-  const apiAddress = useContext(apiAddressContext);
   const player = useContext(playerContext);
   const setPlayer = useContext(setPlayerContext);
-  const playerSelection = useContext(playerSelectionContext);
+  const refresh = useContext(refreshContext)
+  const updatePlayer= useContext(updatePlayerContext);
+
   
   const action = props.action;
   const statValue = props.statValue;
   const index = props.index;
-  const playerId = playerSelection;
   
   const handlePress = () => {
     let newValue = ""
@@ -39,26 +39,11 @@ const StatButton = (props) => {
         ...player
       });
       updatePlayer(player);
+      refresh
     }
   };
 
   useEffect(() => {}, []);
-
-  const updatePlayer = async (player) => {
-    try {
-      const address = apiAddress + playerSelection;
-      const resquestOption = {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(player),
-      };
-      const response = await fetch(address, resquestOption);
-      const json = await response.text();
-      console.log(json)
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
 
   return (

@@ -8,6 +8,7 @@ import {
   Dimensions,
   ScrollView,
 } from "react-native";
+import CharacterSheet from "../../CharacterSheet/CharacterSheet";
 
 // Component Import :
 import HomePage from "../../HomePage/HomePage";
@@ -142,12 +143,17 @@ export const ApiProvider = () => {
                     source={require("../../../src/img/Background.jpg")}
                   />
                   <ScrollView style={[styles.scrollview]}>
-                    <HomePage
+                    {/* <HomePage
                       handleSubmit={handleSubmit}
                       handlePlayerSelection={handlePlayerSelection}
                       playerSelection={playerSelection}
                       playerList={playerList}
-                    />
+                    /> */}
+                    <CharacterSheet 
+                    handleSubmit={handleSubmit}
+                    handlePlayerSelection={handlePlayerSelection}
+                    playerSelection={playerSelection}
+                    playerList={playerList}/>
                   </ScrollView>
                 </playerSelectionContext.Provider>
               </playerContext.Provider>

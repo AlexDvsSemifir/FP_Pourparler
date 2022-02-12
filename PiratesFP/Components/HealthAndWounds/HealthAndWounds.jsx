@@ -31,76 +31,49 @@ const HealthAndWounds = () => {
   let wounds = useContext(playerContext);
   wounds = wounds.wounds;
 
-  const [isWoundExpanded, setWoundIsExpanded] = useState(false);
   const [isNewWoundExpanded, setNewWoundIsExpanded] = useState(false);
 
-  const handleWoundsExpanded = () => {
-    setWoundIsExpanded(!isWoundExpanded);
-  };
   const handleNewWoundExpanded = () => {
     setNewWoundIsExpanded(!isNewWoundExpanded);
   };
 
   return (
     <View>
-      <Collapse isExpanded={isWoundExpanded}>
-        <CollapseHeader>
-          <Pressable
-            style={{ flex: 1, alignItems: "center" }}
-            onPress={handleWoundsExpanded}
-          >
-            <ImageBackground
-              source={require("../../src/img/heart.webp")}
-              style={styles.img}
-            >
-              <Text style={styles.healthBox}>{hp.current}</Text>
-            </ImageBackground>
-          </Pressable>
-          <Text></Text>
-        </CollapseHeader>
-        <CollapseBody>
-          <View style={styles.container}>
-            <DataTable style={styles.woundBox}>
-              <DataTable.Header>
-                <DataTable.Title style={{ flex: 5 }}>Blessure</DataTable.Title>
-                <DataTable.Title style={{ flex: 2 }}>PV</DataTable.Title>
-                <DataTable.Title style={{ flex: 1 }}>Heal</DataTable.Title>
-              </DataTable.Header>
-              {wounds.map((item, i) => {
-                return (
-                  <DataTable.Row key={i}>
-                    <DataTable.Cell style={{ flex: 5, fontSize: 20 }}>
-                      {item.localisation}
-                    </DataTable.Cell>
-                    <DataTable.Cell style={{ flex: 2 }}>
-                      {item.pv}
-                    </DataTable.Cell>
-                    <DataTable.Cell style={{ flex: 1 }}>
-                      <HealthButton index={i} pv={item.pv} />
-                    </DataTable.Cell>
-                  </DataTable.Row>
-                );
-              })}
-            </DataTable>
-          </View>
-          <View>
-            <Collapse isExpanded={isNewWoundExpanded}>
-              <CollapseHeader style={{ flex: 1, alignItems: "center" }}>
-                <Pressable onPress={handleNewWoundExpanded}>
-                  <Image
-                    style={styles.plusIcon}
-                    source={require("../../src/icons/plus.png")}
-                  />
-                </Pressable>
-                <Text />
-              </CollapseHeader>
-              <CollapseBody>
-                <NewWound handleNewWoundExpanded={handleNewWoundExpanded} />
-              </CollapseBody>
-            </Collapse>
-          </View>
-        </CollapseBody>
-      </Collapse>
+      <View style={styles.container}>
+        <DataTable style={styles.woundBox}>
+          <DataTable.Header>
+            <DataTable.Title style={{ flex: 5 }}>Blessure</DataTable.Title>
+            <DataTable.Title style={{ flex: 2 }}>PV</DataTable.Title>
+            <DataTable.Title style={{ flex: 1 }}>Heal</DataTable.Title>
+          </DataTable.Header>
+          {wounds.map((item, i) => {
+            return (
+              <DataTable.Row key={i}>
+                <DataTable.Cell style={{ flex: 5, fontSize: 20 }}>
+                  {item.localisation}
+                </DataTable.Cell>
+                <DataTable.Cell style={{ flex: 2 }}>{item.pv}</DataTable.Cell>
+                <DataTable.Cell style={{ flex: 1 }}>
+                  <HealthButton index={i} pv={item.pv} />
+                </DataTable.Cell>
+              </DataTable.Row>
+            );
+          })}
+        </DataTable>
+      </View>
+      <View>
+        <Text />
+        <Pressable onPress={handleNewWoundExpanded}>
+          <Image
+            style={styles.plusIcon}
+            source={require("../../src/icons/plus.png")}
+          />
+        </Pressable>
+        {isNewWoundExpanded && (
+          <NewWound handleNewWoundExpanded={handleNewWoundExpanded} />
+        )}
+        <Text />
+      </View>
     </View>
   );
 };
@@ -152,5 +125,6 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     resizeMode: "contain",
+    alignSelf: 'center'
   },
 });

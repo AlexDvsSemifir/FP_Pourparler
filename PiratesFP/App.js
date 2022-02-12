@@ -1,21 +1,41 @@
 // Default imports :
 
-import React from "react";
+import React, {useState} from "react";
 import { SafeAreaView, ScrollView, StatusBar, Text, View } from "react-native";
 
 // Components import
 
 import ApiProvider from "./Components/commons/ApiProvider/ApiProvider.jsx";
 
+// Fonts
+import * as Font from "expo-font";
+import useFonts from "./Hooks/useFonts.js";
+import AppLoading from "expo-app-loading";
+
 // App
 
 export default function App() {
-  return (
-    <SafeAreaView>
-      <StatusBar hidden={true} />
+  const [IsReady, SetIsReady] = useState(false);
+  const LoadFonts = async () => {
+    await useFonts();
+  };
+
+  if (!IsReady) {
+    return (
+      <AppLoading
+        startAsync={LoadFonts}
+        onFinish={() => SetIsReady(true)}
+        onError={() => {}}
+      />
+    );
+  } else {
+    return (
+      <SafeAreaView >
+        <StatusBar hidden={true} />
         <ScrollView>
-          <ApiProvider />
+          <ApiProvider style={{fontFamily:'Handsnow'}}/>
         </ScrollView>
-    </SafeAreaView>
-  );
+      </SafeAreaView>
+    );
+  }
 }

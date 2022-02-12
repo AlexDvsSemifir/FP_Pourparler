@@ -26,6 +26,7 @@ const NewWound = (props) => {
   const handleNewWoundLocationChange = (newWoundLocation) => {
     setNewWoundLocation(newWoundLocation);
   };
+  
   const handleNewWoundPvChange = (newWoundPv) => {
     let pv = parseInt(newWoundPv);
     if (Number.isInteger(pv)) {

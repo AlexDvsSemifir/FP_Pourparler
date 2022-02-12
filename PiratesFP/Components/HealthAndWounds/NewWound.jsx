@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet, Button, Alert } from "react-native";
 import React, { useContext, useState } from "react";
 
 // React Native Paper
@@ -36,20 +36,23 @@ const NewWound = (props) => {
   };
 
   const handlePress = () => {
-    let pv = parseInt(newWoundPv);
-    let woundsUpdate = player.wounds;
-    let newWound = { localisation: newWoundLocation, pv: pv };
-    woundsUpdate.push(newWound);
-    let hpUpdate = updateTotalPV();
-    player.wounds = woundsUpdate
-    player.hp = hpUpdate
-    setPlayer({
-      ...player,
-    });
-    updatePlayer(player);
-    props.handleNewWoundExpanded;
-    setNewWoundLocation("");
-    setNewWoundPv("");
+    if(!newWoundLocation) {alert('Indiquez une localisation !')}
+    else {
+      let pv = parseInt(newWoundPv);
+      let woundsUpdate = player.wounds;
+      let newWound = { localisation: newWoundLocation, pv: pv };
+      woundsUpdate.push(newWound);
+      let hpUpdate = updateTotalPV();
+      player.wounds = woundsUpdate
+      player.hp = hpUpdate
+      setPlayer({
+        ...player,
+      });
+      updatePlayer(player);
+      props.handleNewWoundExpanded;
+      setNewWoundLocation("");
+      setNewWoundPv("");
+    }
   };
 
   const updateTotalPV = () => {
@@ -88,6 +91,7 @@ const NewWound = (props) => {
           activeOutlineColor="black"
           value={newWoundPv}
           onChangeText={handleNewWoundPvChange}
+          keyboardType='numeric'
         />
       </View>
       <Button title="Add" color={"grey"} onPress={handlePress} />

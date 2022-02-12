@@ -4,14 +4,13 @@ import {
   Text,
   View,
   StyleSheet,
-  Button,
   ImageBackground,
   Pressable,
   Image,
 } from "react-native";
 
 // React Native Paper
-import { DataTable, TextInput } from "react-native-paper";
+import { DataTable } from "react-native-paper";
 
 // Collapse :
 import {
@@ -20,12 +19,11 @@ import {
   CollapseBody,
 } from "accordion-collapse-react-native";
 
-import { Heart } from "react-native-shapes";
-
 // Context :
 
 import { playerContext } from "../commons/ApiProvider/ApiProvider";
 import NewWound from "./NewWound";
+import HealthButton from "./HealthButton";
 
 const HealthAndWounds = () => {
   let hp = useContext(playerContext);
@@ -64,17 +62,13 @@ const HealthAndWounds = () => {
           <View style={styles.container}>
             <DataTable style={styles.woundBox}>
               <DataTable.Header>
-                <DataTable.Title style={{ flex: 1 }}>Del</DataTable.Title>
                 <DataTable.Title style={{ flex: 5 }}>Blessure</DataTable.Title>
                 <DataTable.Title style={{ flex: 2 }}>PV</DataTable.Title>
-                <DataTable.Title style={{ flex: 1 }}>Down</DataTable.Title>
+                <DataTable.Title style={{ flex: 1 }}>Heal</DataTable.Title>
               </DataTable.Header>
               {wounds.map((item, i) => {
                 return (
                   <DataTable.Row key={i}>
-                    <DataTable.Cell style={{ flex: 1 }}>
-                      <Button title="X" />
-                    </DataTable.Cell>
                     <DataTable.Cell style={{ flex: 5, fontSize: 20 }}>
                       {item.localisation}
                     </DataTable.Cell>
@@ -82,9 +76,7 @@ const HealthAndWounds = () => {
                       {item.pv}
                     </DataTable.Cell>
                     <DataTable.Cell style={{ flex: 1 }}>
-                      <Pressable>
-                        <Heart size={1} />
-                      </Pressable>
+                      <HealthButton index={i} pv={item.pv} />
                     </DataTable.Cell>
                   </DataTable.Row>
                 );
@@ -93,17 +85,17 @@ const HealthAndWounds = () => {
           </View>
           <View>
             <Collapse isExpanded={isNewWoundExpanded}>
-              <CollapseHeader style={{flex: 1, alignItems: 'center'}}>
+              <CollapseHeader style={{ flex: 1, alignItems: "center" }}>
                 <Pressable onPress={handleNewWoundExpanded}>
-                  <Image 
-                  style={styles.plusIcon}
-                  source={require('../../src/icons/plus.png')}
+                  <Image
+                    style={styles.plusIcon}
+                    source={require("../../src/icons/plus.png")}
                   />
                 </Pressable>
                 <Text />
               </CollapseHeader>
               <CollapseBody>
-                <NewWound handleNewWoundExpanded={handleNewWoundExpanded}/>
+                <NewWound handleNewWoundExpanded={handleNewWoundExpanded} />
               </CollapseBody>
             </Collapse>
           </View>
@@ -160,5 +152,5 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     resizeMode: "contain",
-  }
+  },
 });
